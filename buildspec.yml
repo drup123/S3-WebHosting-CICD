@@ -3,11 +3,12 @@ version: 0.2
 phases:
   install:
     commands:
-      - echo "Installing..."
+      - echo Installing dependencies...
 
   build:
     commands:
-      - echo "Build phase - nothing to build."
+      - echo Build started...
+      - echo Nothing to build for static site
 
 artifacts:
   files:
