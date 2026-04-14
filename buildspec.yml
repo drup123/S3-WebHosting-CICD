@@ -1,15 +1,14 @@
 version: 0.2
 
 phases:
-  install:
-    commands:
-      - echo Installing dependencies...
-
   build:
     commands:
-      - echo Build started...
-      - echo Nothing to build for static site
+      - echo Packaging Lambda...
+      - mkdir package
+      - cp lambda_function.py package/
+      - cd package
+      - zip -r ../function.zip .
 
 artifacts:
   files:
-    - '**/*'
+    - function.zip
